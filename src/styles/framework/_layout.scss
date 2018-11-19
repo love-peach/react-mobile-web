@@ -1,0 +1,85 @@
+/* ========================= 布局样式 start ========================= */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-width: $widthPageSize;
+}
+
+#app {
+  height: 100%;
+}
+
+.app-layout {
+  height: 100%;
+  // overflow: auto;
+}
+
+.app-layout-inside {
+  min-height: 100%;
+  padding-bottom: $heightFooter;
+}
+
+.app-container {
+  position: relative;
+  width: $widthPageSize;
+  margin: 0 auto;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.app-container-inside {
+  // overflow: hidden; // 等高样式
+}
+
+.app-side-left {
+  float: left;
+  width: $widthSideLeft;
+
+  // padding-bottom: 9999px; // 等高样式
+  // margin-bottom: -9999px; // 等高样式
+
+  background-color: $demoColor2;
+}
+
+.app-content {
+  // overflow: hidden; // 等高样式
+}
+
+.app-side-left~.app-content {
+  margin-left: $widthSideLeft;
+  // padding-left: 25px;
+}
+
+.app-side-right {
+  float: right;
+  width: $widthSideRight;
+
+  // padding-bottom: 9999px; // 等高样式
+  // margin-bottom: -9999px; // 等高样式
+
+  background-color: $demoColor3;
+}
+
+.app-content-inside {
+  background-color: $demoColor1;
+}
+
+.app-side-right~.app-content-inside {
+  margin-right: $widthSideRight;
+  // padding-right: 25px;
+}
+
+
+.app-header {
+  height: $heightHeader;
+}
+
+.app-footer {
+  height: $heightFooter;
+  margin-top: -$heightFooter;
+}
+
+/* ========================= 布局样式 end ========================= */

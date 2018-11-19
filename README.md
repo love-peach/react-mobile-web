@@ -1,44 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-mobile-web
 
-## Available Scripts
+主要目的：搭建一个 react 移动端项目，做到具有一定通用性，类似于模板的架子。
 
-In the project directory, you can run:
+## TODOLIST
 
-### `npm start`
+- [ ] 目录梳理
+- [ ] 路由处理
+- [ ] 布局模板
+- [ ] 自适应REM
+- [ ] Scss 全局变量
+- [ ] 数据缓存
+- [ ] iconfont
+- [ ] 动态加载
+- [ ] 骨架加载预览
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 路由问题记录
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+`react-router-dom` 模块好像没有 `Router` 组件，之所以可以这么写 `<Router>...</Router>` 是因为 `{ BrowserRouter as Router } from "react-router-dom"` 这种写法，是给 `BrowserRouter` 组件 设置刘别名，所以可以那么些。下面讲的 `Router` 一般是指 `BrowserRouter`;
 
-### `npm test`
+> A <Router> may have only one child element
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`<Router>` 组件只能有一个跟标签。
 
-### `npm run build`
+> You should not use <Link> outside a <Router>
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`Link` 组件必须在 Router 组件内调用。
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+react-router 中有三种类型的组件：
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## react-router
 
-### `npm run eject`
+### 分类
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1、路由器组件
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+每个React Router应用程序的核心应该是路由器组件。对于Web项目，react-router-dom 提供 `<BrowserRouter>` 和 `<HashRouter>` 路由器。
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+一般来讲，如果你有一台相应请求的服务器，那么使用 `<BrowserRouter>`；如果你使用的是静态服务器，那么用 `<HashRouter>`。
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2、路由匹配组件
 
-## Learn More
+有两个路由匹配组件 `<Route>`, `<Switch>`。`<Route>` 根据 `pathname` 匹配到路由，就显示相应的组件。如果有多个匹配，就显示多个。如果没有 `path` 属性，就始终渲染。
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`<Switch>` 组件用于将 `<Route>` 组合在一起。它的作用是 渲染匹配到的第一个组件。
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3、导航组件。
+
+`Link` 相当于链接，导航到对应的路由中。
+`Redirect` 重定向
+
+

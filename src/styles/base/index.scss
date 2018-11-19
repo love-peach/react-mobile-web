@@ -1,0 +1,6 @@
+/* 将 mixins placeholders variables 全部导出，在vue.config.js中引入，在整个项目就可以使用了
+========================================================================== */
+
+@import './variables';
+@import './mixins';
+@import './placeholders';

@@ -1,0 +1,105 @@
+/* ========================= 基础样式 start ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/*===== 参考 http://linxz.github.io/tianyizone/css_reset.html =====*/
+
+/*===== 清除默认的margin的属性值 =====*/
+body,
+blockquote,
+dd,
+dl,
+figure,
+form,
+p,
+pre,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/*===== 统一设置列表的margin和padding，以及列表表形式 =====*/
+menu,
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*===== 全局定义字体以及页面背景 =====*/
+body {
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  background-color: #FFFFFF;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+select,
+textarea {
+  font-size: 18px;
+}
+
+/* 设置字体大小 */
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  font-size: 16px;
+}
+
+/* 设置字体大小，这部分跟前面写在一起，IE6中会无效 */
+
+/*===== 设置文本链接样式 =====*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*===== 去除个别浏览器图片底部的几个像素，以及设置图片形式链接无边框 =====*/
+img {
+  vertical-align: middle;
+}
+
+a img {
+  border: 0 none;
+}
+
+/*===== 设置iframe的背景色以及去除个别浏览器iframe底部的几个像素 =====*/
+iframe {
+  background-color: #FFFFFF;
+  vertical-align: middle;
+}
+
+
+/*===== 设置表格元素的样式 =====*/
+
+/* 合并表格的间隙，去掉单元格之间的间距，如有需要合并单元格为细线表格，可增加 border-collapse:collapse; */
+
+table {
+  border-spacing: 0;
+}
+
+/* 去除单元格以及caption表头的padding值 */
+td,
+th,
+caption {
+  padding: 0;
+}
+
+/* ========================= 基础样式 end ========================= */
