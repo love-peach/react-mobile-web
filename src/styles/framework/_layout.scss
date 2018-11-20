@@ -4,82 +4,58 @@ body {
   height: 100%;
 }
 
-body {
-  min-width: $widthPageSize;
-}
-
-#app {
+#root {
   height: 100%;
 }
+
 
 .app-layout {
   height: 100%;
-  // overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  position: relative;
+  z-index: 97;
+  width: 100%;
+  height: $heightHeader;
+  line-height: 100px;
 }
 
 .app-layout-inside {
-  min-height: 100%;
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  // top: 0;
+  // bottom: 0;
+  // overflow: auto;
+  position: relative;
+  flex: 1;
+}
+
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  height: $heightFooter;
+  line-height: 0.8rem;
+  width: 100%;
+}
+
+.app-header ~ .app-layout-inside {
+  // top: $heightHeader;
+  // padding-top: $heightHeader;
+}
+
+.app-footer ~ .app-layout-inside {
+  // bottom: $heightFooter;
   padding-bottom: $heightFooter;
 }
 
 .app-container {
   position: relative;
-  width: $widthPageSize;
-  margin: 0 auto;
-  padding-right: 25px;
-  padding-left: 25px;
 }
 
-.app-container-inside {
-  // overflow: hidden; // 等高样式
-}
-
-.app-side-left {
-  float: left;
-  width: $widthSideLeft;
-
-  // padding-bottom: 9999px; // 等高样式
-  // margin-bottom: -9999px; // 等高样式
-
-  background-color: $demoColor2;
-}
-
-.app-content {
-  // overflow: hidden; // 等高样式
-}
-
-.app-side-left~.app-content {
-  margin-left: $widthSideLeft;
-  // padding-left: 25px;
-}
-
-.app-side-right {
-  float: right;
-  width: $widthSideRight;
-
-  // padding-bottom: 9999px; // 等高样式
-  // margin-bottom: -9999px; // 等高样式
-
-  background-color: $demoColor3;
-}
-
-.app-content-inside {
-  background-color: $demoColor1;
-}
-
-.app-side-right~.app-content-inside {
-  margin-right: $widthSideRight;
-  // padding-right: 25px;
-}
-
-
-.app-header {
-  height: $heightHeader;
-}
-
-.app-footer {
-  height: $heightFooter;
-  margin-top: -$heightFooter;
-}
 
 /* ========================= 布局样式 end ========================= */

@@ -1,0 +1,29 @@
+.header_wrap {
+  font-size: 36px;
+  color: #fff;
+  vertical-align: middle;
+  background: #4ca6ff;  
+  text-align: center;
+  img {
+    position: absolute;
+    display: inline-block;
+    width: 44px;
+    left: 20px;
+    top: 28px;
+  }
+  .center {
+    display: inline-block;
+  }
+}
+.arrows {
+  position: absolute;
+  width: 100px;
+  .left {
+    display: inline-block;
+    border-left: 4px solid;
+    border-bottom: 4px solid;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+  }
+}

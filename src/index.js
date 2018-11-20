@@ -4,7 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import routers from './routers';
 import * as serviceWorker from './serviceWorker';
 
-import './styles/base/index.scss'
 import './styles/index.scss';
 
 const render = Component => (

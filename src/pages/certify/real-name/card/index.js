@@ -8,9 +8,13 @@ export default class RealNameLiving extends React.Component {
     };
   }
 
+  jumpTo = () => {
+    this.props.history.push('/living');
+  }
+
   render() {
     return (
-      <div>card</div>
+      <div className="demo" onClick={this.jumpTo}>card</div>
     )
   }
 }

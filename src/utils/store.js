@@ -5,10 +5,7 @@ const store = {};
 
 // 本地local存储 方法名与key值对应表
 const storeListLocal = {
-  IsMillionType: 'isMillionType', // 是否是万元版 用于 小额 提额到 大额
-  SmallOperator: 'smallOperator', // 小额运营商
-  EntranceType: 'flagType', // TODO: 暂时没有用到 区分千元版 跟 体验版
-  IsUpgrade: 'isUpgrade', // 是否提额
+  Authed: 'authed', // demo 是否登录 授权。
 };
 
 // 本地session存储 方法名与key值对应表

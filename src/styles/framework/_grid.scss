@@ -8,7 +8,7 @@ $col-xs: xs !default;
 ;
 
 //列名前缀
-$col-pre: col !default;
+$col-pre: grid-col !default;
 ;
 
 //槽宽
@@ -30,7 +30,7 @@ $container-maps: (sm:750px, md:970px, lg:1170px);
 }
 
 //container类
-.container {
+.grid-container {
   padding: {
     left: $gutter/2;
     right: $gutter/2;
@@ -53,7 +53,7 @@ $container-maps: (sm:750px, md:970px, lg:1170px);
   // }
 }
 
-.row {
+.grid-row {
   margin: {
     left: $gutter/-2;
     right: $gutter/-2;
