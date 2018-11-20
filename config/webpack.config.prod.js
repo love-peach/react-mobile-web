@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const path = require('path');
@@ -80,6 +80,7 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
         // https://github.com/facebook/create-react-app/issues/2677
         ident: 'postcss',
         plugins: () => [
+          require('postcss-plugin-px2rem')({ rootValue: 100 }),
           require('postcss-flexbugs-fixes'),
           require('postcss-preset-env')({
             autoprefixer: {
@@ -100,6 +101,12 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
       },
     });
   }
+  loaders.push({
+    loader: require.resolve('sass-resources-loader'),
+    options: {
+      resources: './src/styles/base/index.scss'
+    }
+  })
   return loaders;
 };
 
@@ -224,6 +231,12 @@ module.exports = {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
+      pages: path.resolve(__dirname, '../src/pages'),
+      components: path.resolve(__dirname, '../src/components'),
+      utils: path.resolve(__dirname, '../src/utils'),
+      assets: path.resolve(__dirname, '../src/assets'),
+      api: path.resolve(__dirname, '../src/api'),
+      styles: path.resolve(__dirname, '../src/styles'),
     },
     plugins: [
       // Adds support for installing with Plug'n'Play, leading to faster installs and adding
